@@ -1,0 +1,4 @@
+.vscode-server
+App/log/*
+_mlflow
+.env
