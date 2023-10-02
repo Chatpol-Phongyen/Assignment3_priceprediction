@@ -5,7 +5,7 @@ services:
     # This is for that asking the container to execute the main.py
     command: python3 app.py
     # The image I upload to my docker hub
-    image: oatcp2542/cartesting:A3
+    image: oatcp2542/cartesting:v_2
     build: 
       context: .
       dockerfile: Test.Dockerfile
@@ -15,6 +15,8 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=80
+    env_file:
+      - .env
     # This is important for asking Traefik to use your container.
     labels:
       # Allow Traefik to talk with your service
